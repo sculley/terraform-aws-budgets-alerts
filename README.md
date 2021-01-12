@@ -50,7 +50,7 @@ module "aws_budgets_monthly_alert" {
 
   service_budget_cost_alert_enabled = true
   budget_limit_amount               = "500"
-  budget_service_filter             = "Amazon Relational Database Service
+  budget_service_filter             = "Amazon Relational Database Service"
   notification_type                 = "ACTUAL"
   notification_emails               = "sam@samculley.co.uk"
 }
