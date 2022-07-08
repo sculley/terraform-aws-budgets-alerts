@@ -69,8 +69,11 @@ resource "aws_budgets_budget" "service_budget_cost_email_notification" {
     use_blended = var.cost_type_use_blended
   }
 
-  cost_filters = {
-    Service =  var.budget_service_filter
+  cost_filter {
+    name = "Service"
+    values = [
+      var.budget_service_filter,
+    ]
   }
 
   notification {
