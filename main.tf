@@ -4,7 +4,7 @@ resource "random_string" "random" {
   length = 8
   upper = true
   lower = false
-  number = false
+  numeric = false
   special = false
 }
 
@@ -69,8 +69,11 @@ resource "aws_budgets_budget" "service_budget_cost_email_notification" {
     use_blended = var.cost_type_use_blended
   }
 
-  cost_filters = {
-    Service =  var.budget_service_filter
+  cost_filter {
+    name = "Service"
+    values = [
+      var.budget_service_filter,
+    ]
   }
 
   notification {
