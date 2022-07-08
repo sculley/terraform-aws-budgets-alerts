@@ -3,5 +3,6 @@ terraform {
 
   required_providers {
     aws = "3.22.0"
+    random = "3.3.2"
   }
 }
