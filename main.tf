@@ -39,7 +39,7 @@ resource "aws_budgets_budget" "overall_budget_cost_email_notification" {
     threshold                  = var.notification_threshold
     threshold_type             = "PERCENTAGE"
     notification_type          = var.notification_type
-    subscriber_email_addresses = [var.notification_emails]
+    subscriber_email_addresses = var.notification_emails
   }
 }
 
@@ -81,6 +81,6 @@ resource "aws_budgets_budget" "service_budget_cost_email_notification" {
     threshold                  = var.notification_threshold
     threshold_type             = "PERCENTAGE"
     notification_type          = var.notification_type
-    subscriber_email_addresses = [var.notification_emails]
+    subscriber_email_addresses = var.notification_emails
   }
 }
