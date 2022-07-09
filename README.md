@@ -81,14 +81,14 @@ $ terraform apply
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 3.22.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.52.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | 3.3.2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.22.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.52.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.3.2 |
 
 ## Modules
@@ -99,8 +99,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_budgets_budget.overall_budget_cost_email_notification](https://registry.terraform.io/providers/hashicorp/aws/3.22.0/docs/resources/budgets_budget) | resource |
-| [aws_budgets_budget.service_budget_cost_email_notification](https://registry.terraform.io/providers/hashicorp/aws/3.22.0/docs/resources/budgets_budget) | resource |
+| [aws_budgets_budget.overall_budget_cost_email_notification](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/budgets_budget) | resource |
+| [aws_budgets_budget.service_budget_cost_email_notification](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/budgets_budget) | resource |
 | [random_string.random](https://registry.terraform.io/providers/hashicorp/random/3.3.2/docs/resources/string) | resource |
 
 ## Inputs
