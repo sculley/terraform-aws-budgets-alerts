@@ -32,7 +32,7 @@ module "budgets-alerts" {
   overall_budget_cost_alert_enabled = true
   budget_limit_amount               = "500"
   notification_type                 = "ACTUAL"
-  notification_emails               = "sam@samculley.co.uk"
+  notification_emails               = ["sam@samculley.co.uk"]
 }
 ```
 
@@ -54,7 +54,7 @@ module "budgets-alerts" {
   budget_limit_amount               = "500"
   budget_service_filter             = "Amazon Relational Database Service"
   notification_type                 = "ACTUAL"
-  notification_emails               = "sam@samculley.co.uk"
+  notification_emails               = ["sam@samculley.co.uk"]
 }
 ```
 
@@ -122,7 +122,7 @@ No modules.
 | <a name="input_cost_type_include_upfront"></a> [cost\_type\_include\_upfront](#input\_cost\_type\_include\_upfront) | A boolean value whether to include support costs in the cost budget. | `string` | `"true"` | no |
 | <a name="input_cost_type_use_amortized"></a> [cost\_type\_use\_amortized](#input\_cost\_type\_use\_amortized) | Specifies whether a budget uses the amortized rate. | `string` | `"false"` | no |
 | <a name="input_cost_type_use_blended"></a> [cost\_type\_use\_blended](#input\_cost\_type\_use\_blended) | A boolean value whether to use blended costs in the cost budget. | `string` | `"false"` | no |
-| <a name="input_notification_emails"></a> [notification\_emails](#input\_notification\_emails) | List of email addresses to send budget notifications too | `string` | `""` | no |
+| <a name="input_notification_emails"></a> [notification\_emails](#input\_notification\_emails) | List of email addresses to send budget notifications to | `list(string)` | `[]` | no |
 | <a name="input_notification_threshold"></a> [notification\_threshold](#input\_notification\_threshold) | Threshold when the notification should be sent | `string` | `100` | no |
 | <a name="input_notification_type"></a> [notification\_type](#input\_notification\_type) | What kind of budget value to notify on. Can be ACTUAL or FORECASTED | `string` | `"FORECASTED"` | no |
 | <a name="input_overall_budget_cost_alert_enabled"></a> [overall\_budget\_cost\_alert\_enabled](#input\_overall\_budget\_cost\_alert\_enabled) | Enable/Disable the overall budget cost alert. | `bool` | `false` | no |

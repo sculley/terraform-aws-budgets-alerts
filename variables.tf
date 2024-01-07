@@ -69,12 +69,17 @@ variable "notification_type" {
   description = "What kind of budget value to notify on. Can be ACTUAL or FORECASTED"
   type = string
   default = "FORECASTED"
+
+  validation {
+    condition     = var.notification_type == "ACTUAL" || var.notification_type == "FORECASTED"
+    error_message = "Invalid value for notification_type. Please choose either 'ACTUAL' or 'FORECASTED'."
+  }
 }
 
 variable "notification_emails" {
   description = "List of email addresses to send budget notifications too"
-  type    = string
-  default = ""
+  type    = list(string)
+  default = []
 }
 
 variable "cost_type_include_credit" {
